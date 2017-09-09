@@ -1,0 +1,891 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://images/blocks.png" type="Texture" id=1]
+[ext_resource path="res://fightningplatform.gd" type="Script" id=2]
+[ext_resource path="res://figthtningplatform2.gd" type="Script" id=3]
+[ext_resource path="res://bear.tscn" type="PackedScene" id=4]
+[ext_resource path="res://images/fightningplatfrom.png" type="Texture" id=5]
+[ext_resource path="res://images/back2.png" type="Texture" id=6]
+[ext_resource path="res://player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://images/spikes.png" type="Texture" id=8]
+[ext_resource path="res://sudjuk.tscn" type="PackedScene" id=9]
+[ext_resource path="res://30px.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://20px.fnt" type="BitmapFont" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 48.109, 16.0763 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 200.736, 9.68079 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 299.605, 14.1179 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 232.418, 185.968 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -2622.55, 1312.12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 130.587, 489.838 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 323.587, 448.838 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D1"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D1"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 468.587, 395.838 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D2"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D2"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 583.587, 323.838 )
+transform/rot = 72.3226
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D3"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D3"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 557.403, -332.828 )
+transform/rot = 41.1581
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D7"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D7"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 414.609, -35.705 )
+transform/rot = -64.1782
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D9"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D9"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 1081.8, -654.291 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D12"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D12"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 2195.66, -676.239 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D13"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D13"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 2545.56, -1208.24 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D16"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D16"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 2812.5, -1184.63 )
+transform/rot = -28.8022
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D17"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D17"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 3108.25, -261.068 )
+transform/rot = 1.31032
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D18"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D18"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 2373.09, -827.401 )
+transform/rot = 68.8786
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D14"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D14"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 840.506, -425.762 )
+transform/rot = 67.8621
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/StaticBody2D11"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D11"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Fightning Platform" type="StaticBody2D" parent="Platforms"]
+
+editor/display_folded = true
+transform/pos = Vector2( 1470.74, -659.601 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script/script = ExtResource( 2 )
+
+[node name="FlyingPlatfrom" type="StaticBody2D" parent="Platforms/Fightning Platform"]
+
+editor/display_folded = true
+transform/pos = Vector2( 433.864, -356.754 )
+transform/rot = 2.16071
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script/script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/Fightning Platform/FlyingPlatfrom"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Fightning Platform/FlyingPlatfrom"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Bear1" parent="Platforms/Fightning Platform" groups=[
+"bears",
+] instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 156.52, -44.0598 )
+
+[node name="Sprite" type="Sprite" parent="Platforms/Fightning Platform"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Fightning Platform"]
+
+visibility/visible = false
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Camera2D" type="Camera2D" parent="Platforms/Fightning Platform"]
+
+offset = Vector2( 0, -100 )
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="Position2D" type="Position2D" parent="Platforms/Fightning Platform"]
+
+transform/pos = Vector2( 428.514, -4.08105 )
+
+[node name="Fightning Platform1" type="StaticBody2D" parent="Platforms"]
+
+transform/pos = Vector2( 3519.43, -278.395 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script/script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FlyingPlatfrom" type="StaticBody2D" parent="Platforms/Fightning Platform1"]
+
+editor/display_folded = true
+transform/pos = Vector2( 1500, -356.754 )
+transform/rot = 2.16071
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script/script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platforms/Fightning Platform1/FlyingPlatfrom"]
+
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Fightning Platform1/FlyingPlatfrom"]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Bear1" parent="Platforms/Fightning Platform1" groups=[
+"bears",
+] instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 156.52, -44.0598 )
+health = 200
+damage = 40
+
+[node name="Sprite" type="Sprite" parent="Platforms/Fightning Platform1"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Fightning Platform1"]
+
+visibility/visible = false
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Camera2D" type="Camera2D" parent="Platforms/Fightning Platform1"]
+
+offset = Vector2( 0, -100 )
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="Position2D" type="Position2D" parent="Platforms/Fightning Platform1"]
+
+transform/pos = Vector2( 428.514, -4.08105 )
+
+[node name="Background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 537.062, 57.0574 )
+transform/scale = Vector2( 4, 4 )
+z/z = -1
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." groups=[
+"player",
+] instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -2497.79, 1706.18 )
+
+[node name="MainGroundSpikes" type="KinematicBody2D" parent="." groups=[
+"spikes",
+]]
+
+editor/display_folded = true
+transform/pos = Vector2( -804.109, 1915.93 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 8.35096, 0, 0, 1, -0.941658, 0.74955 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MainGroundSpikes"]
+
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainGroundSpikes"]
+
+visibility/visible = false
+transform/pos = Vector2( -0.941658, 0.74955 )
+transform/scale = Vector2( 8.35096, 1 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="MainGroundSpikes1" type="KinematicBody2D" parent="." groups=[
+"spikes",
+]]
+
+editor/display_folded = true
+transform/pos = Vector2( 4193, 1915.93 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 8.35096, 0, 0, 1, -0.941658, 0.74955 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MainGroundSpikes1"]
+
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainGroundSpikes1"]
+
+visibility/visible = false
+transform/pos = Vector2( -0.941658, 0.74955 )
+transform/scale = Vector2( 8.35096, 1 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Sudjuci" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="sudjuk" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -2154.94, 1643.43 )
+
+[node name="sudjuk6" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1951.71, 1341.08 )
+
+[node name="sudjuk2" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -2299.66, 1054.94 )
+
+[node name="sudjuk3" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -1722.85, 648.725 )
+
+[node name="sudjuk7" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -2015.79, 1112.01 )
+
+[node name="sudjuk4" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -735.513, 542.825 )
+
+[node name="sudjuk5" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -735.513, 542.825 )
+transform/rot = 3.40085
+
+[node name="sudjuk8" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -184.357, 285.619 )
+transform/rot = 3.40085
+
+[node name="sudjuk10" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 465.592, 572.936 )
+transform/rot = 3.40085
+
+[node name="sudjuk11" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 384.697, 344.198 )
+transform/rot = 3.40085
+
+[node name="sudjuk12" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 479.54, 832.358 )
+transform/rot = 3.40085
+
+[node name="sudjuk9" parent="Sudjuci" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -350.45, 105.172 )
+transform/rot = 3.40085
+
+[node name="StartPos" type="Position2D" parent="."]
+
+transform/pos = Vector2( -2493.13, 1702.12 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1152.41, 521.928 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 11.7324, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+transform/pos = Vector2( 11.7324, 0 )
+shape = SubResource( 4 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Area2D1" type="Area2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 874.91, 906.012 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 11.7324, 0 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D1"]
+
+transform/pos = Vector2( 11.7324, 0 )
+shape = SubResource( 4 )
+trigger = true
+_update_shape_index = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Health" type="Label" parent="CanvasLayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 37.0
+margin/top = 20.0
+margin/right = 77.0
+margin/bottom = 34.0
+custom_fonts/font = ExtResource( 10 )
+text = "Ehoo"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sudjuci" type="Label" parent="CanvasLayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 39.0
+margin/top = 754.0
+margin/right = 120.0
+margin/bottom = 787.0
+custom_fonts/font = ExtResource( 10 )
+text = "Sudjuci"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Tip1" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -2718.0
+margin/top = 1644.0
+margin/right = -2246.0
+margin/bottom = 1687.0
+custom_fonts/font = ExtResource( 11 )
+text = "Tip: Gather the sudjuci, because without them,
+ you can't defeat the two big bears."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -1912.0
+margin/top = 1499.0
+margin/right = -1579.0
+margin/bottom = 1594.0
+custom_fonts/font = ExtResource( 11 )
+text = "Tip: Shoot yourself from cliff walls. 
+Hold the UP arrow key while climbing the wall
+and meanwhile hold the left or right arrow key."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label 2" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -2488.0
+margin/top = 847.0
+margin/right = -2187.0
+margin/bottom = 913.0
+custom_fonts/font = ExtResource( 11 )
+text = "Remeber, the sudjuci 
+give you health, damage and jump strenght.
+You can use the spacebar to attack."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="body_enter" from="Area2D" to="Platforms/Fightning Platform" method="_on_Area2D_body_enter"]
+
+[connection signal="body_exit" from="Area2D" to="Platforms/Fightning Platform" method="_on_Area2D_body_exit"]
+
+[connection signal="body_enter" from="Area2D1" to="Platforms/Fightning Platform1" method="_on_Area2D1_body_enter"]
+
+[connection signal="body_exit" from="Area2D1" to="Platforms/Fightning Platform1" method="_on_Area2D1_body_exit"]
+
+

@@ -1,0 +1,147 @@
+[gd_scene load_steps=24 format=1]
+
+[ext_resource path="res://bear.gd" type="Script" id=1]
+[ext_resource path="res://images/static1-upgraded.tex" type="Texture" id=2]
+[ext_resource path="res://images/static2-upgraded.tex" type="Texture" id=3]
+[ext_resource path="res://images/Bear/kick1-upgraded.tex" type="Texture" id=4]
+[ext_resource path="res://images/Bear/kick3-upgraded.tex" type="Texture" id=5]
+[ext_resource path="res://images/Bear/kick2-upgraded.tex" type="Texture" id=6]
+[ext_resource path="res://images/Bear/kick4-upgraded.tex" type="Texture" id=7]
+[ext_resource path="res://images/Bear/walk1-upgraded.tex" type="Texture" id=8]
+[ext_resource path="res://images/Bear/walk2-upgraded.tex" type="Texture" id=9]
+[ext_resource path="res://images/Bear/walk3-upgraded.tex" type="Texture" id=10]
+[ext_resource path="res://images/Bear/walk4-upgraded.tex" type="Texture" id=11]
+[ext_resource path="res://images/Bear/hit1-upgraded.tex" type="Texture" id=12]
+[ext_resource path="res://images/Bear/hit3-upgraded.tex" type="Texture" id=13]
+[ext_resource path="res://images/Bear/hit2-upgraded.tex" type="Texture" id=14]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -14.6891, -11.5676, 11.6558, -23.7763, 14.7401, -24.5474, 12.4269, -9.25443, -14.6891, -0.515625 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 13.455, 15.8054, 15.7682, 28.9136, -10.7053, 27.6285, -14.6891, -0.515625 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 13.0695, 12.2071, 13.455, 15.8054, -14.6891, -0.515625 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 13.455, 1.41206, 13.0695, 12.2071, -14.6891, -0.515625, 12.4269, -9.25443 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 11.6558, -23.7763, -14.6891, -11.5676, -14.4321, -19.4069, -12.1189, -24.9329, -8.52055, -28.0172, 9.72814, -25.961 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 9.08558, -26.7321, 9.72814, -25.961, -8.52055, -28.0172, -6.46436, -29.6878, -2.22346, -29.8163, 3.55957, -29.8163, 6.90088, -28.1457 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 6.90088, -28.1457, 8.05749, -28.0172, 9.08558, -26.7321 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 6.90088, -28.1457, 3.55957, -29.8163, 5.61576, -29.3023 )
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Kick",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "Hit",
+"speed": 6.0
+} ]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 3 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 4 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 5 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/4/trigger = false
+shapes/5/shape = SubResource( 6 )
+shapes/5/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/5/trigger = false
+shapes/6/shape = SubResource( 7 )
+shapes/6/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/6/trigger = false
+shapes/7/shape = SubResource( 8 )
+shapes/7/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/7/trigger = false
+collision/layers = 2
+collision/mask = 3
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+health = 100
+damage = 35
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+transform/rot = -90.0
+enabled = true
+cast_to = Vector2( 0, 25 )
+layer_mask = 1
+type_mask = 15
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 9 )
+animation = "Hit"
+frame = 2
+playing = true
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+build_mode = 0
+polygon = Vector2Array( -10.7053, 27.6285, -14.6891, -0.515625, -14.6891, -11.5676, -14.4321, -19.4069, -12.1189, -24.9329, -8.52055, -28.0172, -6.46436, -29.6878, -2.22346, -29.8163, 3.55957, -29.8163, 5.61576, -29.3023, 6.90088, -28.1457, 8.05749, -28.0172, 9.08558, -26.7321, 9.72814, -25.961, 11.6558, -23.7763, 14.7401, -24.5474, 12.4269, -9.25443, 13.455, 1.41206, 13.0695, 12.2071, 13.455, 15.8054, 15.7682, 28.9136 )
+shape_range = Vector2( 0, 7 )
+trigger = false
+
+[node name="RayCast2D 2" type="RayCast2D" parent="."]
+
+transform/rot = 180.0
+enabled = true
+cast_to = Vector2( 0, 300 )
+layer_mask = 1
+type_mask = 15
+
+

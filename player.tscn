@@ -1,0 +1,100 @@
+[gd_scene load_steps=18 format=1]
+
+[ext_resource path="res://blob.gd" type="Script" id=1]
+[ext_resource path="res://images/player/punch1.tex" type="Texture" id=2]
+[ext_resource path="res://images/player/punch2.tex" type="Texture" id=3]
+[ext_resource path="res://images/player/punch3.tex" type="Texture" id=4]
+[ext_resource path="res://images/player/punch4.tex" type="Texture" id=5]
+[ext_resource path="res://images/player/punch5.tex" type="Texture" id=6]
+[ext_resource path="res://images/player/punch6.tex" type="Texture" id=7]
+[ext_resource path="res://images/player/punch7.tex" type="Texture" id=8]
+[ext_resource path="res://images/player/punch8.tex" type="Texture" id=9]
+[ext_resource path="res://images/player/jumping1.tex" type="Texture" id=10]
+[ext_resource path="res://images/player/jumping2.tex" type="Texture" id=11]
+[ext_resource path="res://images/player/walking1.tex" type="Texture" id=12]
+[ext_resource path="res://images/player/walking2.tex" type="Texture" id=13]
+[ext_resource path="res://images/player/walking3.tex" type="Texture" id=14]
+[ext_resource path="res://images/player/walking4.tex" type="Texture" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.0964, 22.2427 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "attack",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "walking",
+"speed": 5.0
+} ]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 4.25225, -0.234722 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 2
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+smoothness = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 4.25225, -0.234722 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 2 )
+animation = "attack"
+
+[node name="attackcast" type="RayCast2D" parent="."]
+
+transform/rot = 90.0
+enabled = true
+cast_to = Vector2( 0, 45 )
+layer_mask = 2
+type_mask = 15
+
+
